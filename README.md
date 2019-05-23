@@ -1,3 +1,2 @@
 # callback
-
-#implementation 'com.github.GithubUsername:callbacklibs:0.0.1'
+implementation 'com.github.galfari:callbacklibs:0.0.2'
