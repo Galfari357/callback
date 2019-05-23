@@ -10,13 +10,10 @@ buildscript {
         Espresso = "3.0.2"
     }
     repositories {
-
         google()
         jcenter()
-        mavenCentral()
-        maven { url "https://jitpack.io" }
-        
     }
+
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
@@ -31,9 +28,6 @@ allprojects {
     repositories {
         google()
         jcenter()
-        mavenCentral()
-        maven { url "https://jitpack.io" }
-        
     }
 }
 
