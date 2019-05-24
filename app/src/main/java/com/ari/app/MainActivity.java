@@ -2,6 +2,7 @@ package com.ari.app;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.ari.callback.NewsCallback;
 import com.ari.callback.NewsCallbackImpl;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements NewsCallback {
 
     @Override
     public void onNewsSuccess(ListData listData) {
-
+        Toast.makeText(this, listData.toString(), Toast.LENGTH_LONG).show();
     }
 
     @Override
