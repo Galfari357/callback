@@ -3,13 +3,15 @@ package com.ari.app.callback;
 import android.content.Context;
 import android.support.annotation.Nullable;
 
-import com.ari.app.DataConfig;
 import com.ari.app.cryp.FTAes;
 import com.ari.app.helper.DeviceHelper;
 import com.ari.app.model.artikel.ListData;
 import com.ari.app.network.CallbackInterface;
 import com.ari.app.network.RequestManager;
 import com.google.gson.Gson;
+
+import static com.ari.app.helper.SecretKeyHelper.community_key;
+import static com.ari.app.helper.SecretKeyHelper.encrypKey_key;
 
 public class NewsCallbackImpl implements CallbackInterface, NewsUseCase {
 
@@ -22,7 +24,7 @@ public class NewsCallbackImpl implements CallbackInterface, NewsUseCase {
         this.context = context;
         this.listener = listener;
         deviceId = DeviceHelper.getDeviceID(context);
-        communityId = DataConfig.communityId;
+        communityId = community_key();
     }
 
     @Override
@@ -58,7 +60,7 @@ public class NewsCallbackImpl implements CallbackInterface, NewsUseCase {
                 " \"keyword\": \"" + keyword + "\"\n" +
                 "}";
 
-        String data = FTAes.encrypt(jsonData, DataConfig.getSecretKey());
+        String data = FTAes.encrypt(jsonData, encrypKey_key());
         RequestManager.getNews(context, new NewsCallbackImpl(context, listener), deviceId, communityId, data, 0);
     }
 }

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.Build;
 
 import com.ari.app.BuildConfig;
-import com.ari.app.DataConfig;
 import com.ari.app.R;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -37,6 +36,8 @@ import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import static com.ari.app.helper.SecretKeyHelper.default_key;
 
 public class ApiClient {
     private static Retrofit retrofit = null;
@@ -140,7 +141,7 @@ public class ApiClient {
                 Request.Builder ongoing = chain.request().newBuilder();
                 if (withheader) {
                     ongoing.addHeader("Content-Type", "application/x-www-form-urlencoded");
-                    ongoing.addHeader("api-key", DataConfig.getApiKey());
+                    ongoing.addHeader("api-key", default_key());
                 }
                 return chain.proceed(ongoing.build());
             }

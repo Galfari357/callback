@@ -10,7 +10,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static com.ari.app.DataConfig.getSecretKey;
+import static com.ari.app.helper.SecretKeyHelper.encrypKey_key;
 import static com.ari.app.network.ApiConfig.SUCCESS_CODE;
 import static com.ari.app.network.ApiConfig.SUCCESS_CODE2;
 import static com.ari.app.network.ApiConfig.SUCCESS_CODE3;
@@ -34,7 +34,7 @@ public class ApiRequest implements Callback<Basev2> {
         if (response.code() == Integer.parseInt(successStatusCode)) {
             if (response.body().getData() != null) {
                 if (response.body().getStatus().equals(SUCCESS_CODE) || response.body().getStatus().equals(SUCCESS_CODE2) || response.body().getStatus().equals(SUCCESS_CODE3)) {
-                    String data = FTAes.decrypt(response.body().getData().toString(), getSecretKey());
+                    String data = FTAes.decrypt(response.body().getData().toString(), encrypKey_key());
                     onRequestSuccess(call, data);
                 } else{
                     onRequestFailure(RequestManager.RequestFailureType.SERVICE_FAILURE, call, response.body().getStatus(), response.body().getMessage()+"");
