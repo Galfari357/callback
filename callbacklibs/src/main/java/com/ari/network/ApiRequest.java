@@ -1,19 +1,19 @@
-package com.ari.app.network;
+package com.ari.network;
 
 import android.content.Context;
 import android.util.Log;
 
-import com.ari.app.cryp.FTAes;
-import com.ari.app.model.Basev2;
+import com.ari.cryp.FTAes;
+import com.ari.model.Basev2;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static com.ari.app.helper.SecretKeyHelper.encrypKey_key;
-import static com.ari.app.network.ApiConfig.SUCCESS_CODE;
-import static com.ari.app.network.ApiConfig.SUCCESS_CODE2;
-import static com.ari.app.network.ApiConfig.SUCCESS_CODE3;
+import static com.ari.helper.SecretKeyHelper.encrypKey_key;
+import static com.ari.network.ApiConfig.SUCCESS_CODE;
+import static com.ari.network.ApiConfig.SUCCESS_CODE2;
+import static com.ari.network.ApiConfig.SUCCESS_CODE3;
 
 public class ApiRequest implements Callback<Basev2> {
 

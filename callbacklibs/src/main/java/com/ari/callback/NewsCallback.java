@@ -1,6 +1,6 @@
-package com.ari.app.callback;
+package com.ari.callback;
 
-import com.ari.app.model.artikel.ListData;
+import com.ari.model.artikel.ListData;
 
 public interface NewsCallback {
 

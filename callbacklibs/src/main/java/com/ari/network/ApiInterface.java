@@ -1,7 +1,7 @@
-package com.ari.app.network;
+package com.ari.network;
 
 
-import com.ari.app.model.Basev2;
+import com.ari.model.Basev2;
 
 import retrofit2.Call;
 import retrofit2.http.Field;

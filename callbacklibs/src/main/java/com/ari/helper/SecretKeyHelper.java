@@ -1,4 +1,4 @@
-package com.ari.app.helper;
+package com.ari.helper;
 
 public class SecretKeyHelper {
 

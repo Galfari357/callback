@@ -1,4 +1,4 @@
-package com.ari.app.cryp;
+package com.ari.cryp;
 
 import android.annotation.SuppressLint;
 import android.util.Base64;

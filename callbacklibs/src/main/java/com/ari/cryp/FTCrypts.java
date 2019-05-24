@@ -1,4 +1,4 @@
-package com.ari.app.cryp;
+package com.ari.cryp;
 
 import java.sql.Timestamp;
 import java.text.ParseException;

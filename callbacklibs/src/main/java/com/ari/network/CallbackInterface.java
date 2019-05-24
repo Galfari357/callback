@@ -1,4 +1,4 @@
-package com.ari.app.network;
+package com.ari.network;
 
 import android.support.annotation.Nullable;
 

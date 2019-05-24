@@ -1,4 +1,4 @@
-package com.ari.app.network;
+package com.ari.network;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -37,7 +37,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static com.ari.app.helper.SecretKeyHelper.default_key;
+import static com.ari.helper.SecretKeyHelper.default_key;
 
 public class ApiClient {
     private static Retrofit retrofit = null;

@@ -1,4 +1,4 @@
-package com.ari.app.callback;
+package com.ari.callback;
 
 public interface NewsUseCase {
 

@@ -1,4 +1,4 @@
-package com.ari.app.model;
+package com.ari.model;
 
 
 

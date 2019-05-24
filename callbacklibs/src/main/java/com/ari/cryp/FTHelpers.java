@@ -1,4 +1,4 @@
-package com.ari.app.cryp;
+package com.ari.cryp;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -1,17 +1,17 @@
-package com.ari.app.callback;
+package com.ari.callback;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
 
-import com.ari.app.cryp.FTAes;
-import com.ari.app.helper.DeviceHelper;
-import com.ari.app.model.artikel.ListData;
-import com.ari.app.network.CallbackInterface;
-import com.ari.app.network.RequestManager;
+import com.ari.cryp.FTAes;
+import com.ari.helper.DeviceHelper;
+import com.ari.model.artikel.ListData;
+import com.ari.network.CallbackInterface;
+import com.ari.network.RequestManager;
 import com.google.gson.Gson;
 
-import static com.ari.app.helper.SecretKeyHelper.community_key;
-import static com.ari.app.helper.SecretKeyHelper.encrypKey_key;
+import static com.ari.helper.SecretKeyHelper.community_key;
+import static com.ari.helper.SecretKeyHelper.encrypKey_key;
 
 public class NewsCallbackImpl implements CallbackInterface, NewsUseCase {
 

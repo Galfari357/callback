@@ -1,4 +1,4 @@
-package com.ari.app.network;
+package com.ari.network;
 
 public class ApiConfig {
     public static final String BASE_URL = "https://beta.smartcom.id/";

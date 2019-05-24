@@ -1,4 +1,4 @@
-package com.ari.app.model.artikel;
+package com.ari.model.artikel;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
